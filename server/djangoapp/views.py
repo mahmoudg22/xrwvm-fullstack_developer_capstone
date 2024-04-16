@@ -15,13 +15,9 @@ from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
 from .models import CarMake, CarModel
 
-                                         
-def index(request):
 
-    if request.method == 'POST':
-        #form = Top_List_Form(request.POST)
-        return HttpResponse("Do something") # methods must return HttpResponse
-    
+
+                                         
 
 
 # Get an instance of a logger
@@ -31,7 +27,6 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 
 # Create a `login_request` view to handle sign in request
-@csrf_exempt
 def login_user(request):
     if request.method == 'POST':
         try:
@@ -69,6 +64,7 @@ def login_user(request):
     else:
         # If request method is not POST, return a response with status 405 (Method Not Allowed)
         return JsonResponse({'error': 'Method not allowed'}, status=405)
+
 
 def logout_request(request):
     logout(request)
