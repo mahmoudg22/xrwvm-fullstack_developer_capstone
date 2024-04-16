@@ -1,9 +1,9 @@
-
-import Register from "./components/Register/Register"
 import RootPage from "./components/RootPage"; // Import your RootPage component
-import LoginPanel from "./components/Login/Login"
-import LogoutPage from "./components/LogoutPage";
 import { Routes, Route } from "react-router-dom";
+import LoginPanel from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import LogoutPage from "./components/LogoutPage";
+
 
 function App() {
   return (
