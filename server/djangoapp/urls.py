@@ -2,19 +2,18 @@
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from djangoapp import views
+from . import views
 
 app_name = 'djangoapp'
 urlpatterns = [
-    path(route='get_cars', view=views.get_cars, name ='getcars'),
+   
     # path for registration
     path(route='register', view=views.registration, name='register'),
     # path for login
     path(route='login', view=views.login_user, name='login'),
-    path('logout/', views.logout_request, name='logout'),
-
+    path(route='logout', view=views.logout_request, name='logout'),
     # path for dealer reviews view
-    
+    path(route='get_cars', view=views.get_cars, name ='getcars'),
     # path for add a review view
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

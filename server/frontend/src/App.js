@@ -1,4 +1,4 @@
-import RootPage from "./components/RootPage"; // Import your RootPage component
+//import RootPage from "./components/RootPage"; // Import your RootPage component
 import { Routes, Route } from "react-router-dom";
 import LoginPanel from "./components/Login/Login";
 import Register from "./components/Register/Register";
@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPanel />} />
-      <Route path="/root" element={<RootPage />} />
+      
       <Route path="/logout" element={<LogoutPage />} />
       <Route path='/register' element={<Register/>} />
     </Routes>
@@ -17,3 +17,4 @@ function App() {
 }
 
 export default App;
+//<Route path="/root" element={<RootPage />} />
