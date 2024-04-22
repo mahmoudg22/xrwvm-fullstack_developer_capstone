@@ -9,7 +9,7 @@ from django.contrib import messages
 from datetime import datetime
 
 from django.http import JsonResponse
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate , logout
 import logging
 import json
 from django.views.decorators.csrf import csrf_exempt

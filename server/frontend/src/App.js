@@ -2,7 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import LoginPanel from "./components/Login/Login";
 import Register from "./components/Register/Register";
-//import LogoutPage from "./components/LogoutPage";
+import LogoutPage from "./components/LogoutPage";
 
 
 function App() {
