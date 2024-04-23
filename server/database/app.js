@@ -81,29 +81,22 @@ try {
 });
 
 // Express route to fetch dealer by a particular id
-app.get('/fetchDealer/:id', async (req, res) => {
+// middleware mounting
+app.use(express.urlencoded({ extended: false }));
 
-    try {
-  
-      const id = Number(req.params.id);
-  
-      if (isNaN(id)) {
-        return res.status(400).json({error: 'Invalid dealer id'}); 
-      }
-  
-      const dealer = await Dealerships.findOne({id});
-      
-      if (!dealer) {
-        return res.status(404).json({error: 'Dealer not found'});
-      }
-  
-      res.json(dealer);
-  
-    } catch (error) {
-      res.status(500).json({error: 'Error fetching dealer'});
-    }
-  
-  });
+
+// endpoint
+app.get('/fetchDealer/:id', async (req, res) => {
+  try {
+    const documents = await Dealerships.find({ id: req.params.id });
+    res.json(documents);
+  } catch (error) {
+    res.status(500).json({ error: 'Error fetching dealers by ID' });
+  }
+});
+
+
+
 
 //Express route to insert review
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
