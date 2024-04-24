@@ -130,7 +130,7 @@ def get_dealer_reviews(request, dealer_id):
             review_detail['sentiment'] = response['sentiment']
         return JsonResponse({"status":200,"reviews":reviews})
     else:
-        return JsonResponse({"status":400,"message":"Bad Request"})        
+        return JsonResponse({"status":400,"message":"Bad Request"})     
 # Create a `add_review` view to submit a review
 # def add_review(request):
 # ...

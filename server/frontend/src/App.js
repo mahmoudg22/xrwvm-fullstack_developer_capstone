@@ -5,14 +5,13 @@ import Register from "./components/Register/Register";
 import LogoutPage from "./components/LogoutPage";
 import Dealers from './components/Dealers/Dealers';
 import Dealer from "./components/Dealers/Dealer";
-import PostReview from "./components/Dealers/PostReview"
+import PostReview from "./components/Dealers/PostReview";
 
 
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPanel />} />
-      
       <Route path="/logout" element={<LogoutPage />} />
       <Route path='/register' element={<Register/>} />
       <Route path="/dealers" element={<Dealers/>} />
