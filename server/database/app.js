@@ -98,8 +98,6 @@ app.get('/fetchDealer/:id', async (req, res) => {
 });
 
 
-
-
 //Express route to insert review
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
   data = JSON.parse(req.body);

@@ -99,6 +99,7 @@ def get_cars(request):
 # def get_dealer_reviews(request,dealer_id):
 # ...
 #Update the `get_dealerships` render list of dealerships all by default, particular state if state is passed
+#Update the `get_dealerships` render list of dealerships all by default, particular state if state is passed
 def get_dealerships(request, state="All"):
     if(state == "All"):
         endpoint = "/fetchDealers"
@@ -116,7 +117,6 @@ def get_dealer_details(request, dealer_id):
         return JsonResponse({"status":200,"dealer":dealership})
     else:
         return JsonResponse({"status":400,"message":"Bad Request"})
-
 
 
 def get_dealer_reviews(request, dealer_id):
@@ -145,3 +145,4 @@ def add_review(request):
             return JsonResponse({"status":401,"message":"Error in posting review"})
     else:
         return JsonResponse({"status":403,"message":"Unauthorized"})
+        
